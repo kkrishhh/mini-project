@@ -1,5 +1,6 @@
-import { Box, Typography, Paper, Accordion, AccordionSummary, AccordionDetails } from '@mui/material';
+import { Box, Typography, Paper, Accordion, AccordionSummary, AccordionDetails, IconButton, Tooltip } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 const faqData = [
   {
@@ -21,6 +22,10 @@ const faqData = [
 ];
 
 function Help() {
+  const handleLinkedInClick = () => {
+    window.open('https://www.linkedin.com/in/soham-pawar/', '_blank');
+  };
+
   return (
     <Box sx={{ height: '100%' }}>
       <Box sx={{ 
@@ -36,6 +41,19 @@ function Help() {
         }}>
           Help & FAQ
         </Typography>
+        <Tooltip title="Contact on LinkedIn">
+          <IconButton 
+            onClick={handleLinkedInClick}
+            sx={{ 
+              color: '#0A66C2',
+              '&:hover': {
+                backgroundColor: '#E8F0FE',
+              },
+            }}
+          >
+            <LinkedInIcon sx={{ fontSize: 28 }} />
+          </IconButton>
+        </Tooltip>
       </Box>
 
       <Paper sx={{ 
