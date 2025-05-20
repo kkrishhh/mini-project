@@ -314,7 +314,7 @@ function Dashboard() {
                   key={row.id}
                   sx={{
                     '&:last-child td': { border: 0 },
-                    '&:hover': { backgroundColor: '#f8fafc' },
+                    '&:hover': { backgroundColor: '#ff' },
                   }}
                 >
                   <TableCell sx={{ py: 2.5, pl: 3, color: '#334155', whiteSpace: 'nowrap' }}>
